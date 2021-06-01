@@ -39,6 +39,32 @@ main h1 {
   margin-bottom: 3rem;
 }
 
+main .alternative {
+  margin-top: 1rem;
+}
+
+main .alternative span {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+main .alternative span::before,
+main .alternative span::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100px;
+  bottom: 50%;
+  right: 50px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+main .alternative span::after {
+  left: 50px;
+}
+
 main .social-media {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,5 +126,49 @@ main form label input {
 main form label span {
   font-size: 1.1rem;
   margin-top: 2rem;
+}
+
+main form input[type="submit"] {
+  cursor: pointer;
+  width: 50%;
+  margin-top: 4rem;
+  border: none;
+  border-radius: 32px;
+  background-color: #6c63ff;
+  color: white;
+  font-size: 1.1rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  padding: 0.7rem;
+}
+
+main form input[type="submit"]:hover {
+  background-color: #5955d4;
+}
+
+section.images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 4rem;
+}
+
+section.images img {
+  width: 80%;
+}
+
+section.images .circle {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #8ecbd0, #636fa4);
+  -webkit-clip-path: circle(40% at right 110%);
+          clip-path: circle(40% at right 110%);
+  z-index: -1;
 }
 /*# sourceMappingURL=styles.css.map */
